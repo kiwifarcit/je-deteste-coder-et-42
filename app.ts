@@ -341,8 +341,8 @@ async function display_profile(username) {
 
 // afficher le profile
 document.getElementById("profile_button").addEventListener("click", async (event) => {
-    await display_profile(_username);
     document.getElementById("menu").classList.replace("block", "hidden");
+    await display_profile(_username);
 });
 
 // afficher le menu du jeu
@@ -601,7 +601,7 @@ document.getElementById("offline").addEventListener("click", async (event) => {
     event.preventDefault();
 
     console.log("STARTING");
-    document.getElementById("pageContent").classList.replace("flex", "hidden");
+    document.getElementById("menu").classList.replace("flex", "hidden");
     try {
         const body = {
             username: _username,
